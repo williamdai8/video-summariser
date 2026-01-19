@@ -19,7 +19,24 @@ A high-performance Python tool that summarizes long videos by extracting short c
 
 ## Installation
 
-Requires Python 3.12+ and FFmpeg (installed automatically via `imageio-ffmpeg`).
+Requires Python 3.12+, FFmpeg (installed automatically via `imageio-ffmpeg`) and uv for package management.
+
+## 🚀 Installation & Setup using `uv`
+
+This project uses [uv](https://github.com/astral-sh/uv), an extremely fast Python package installer and resolver.
+
+### 1. Install `uv`
+If you haven't installed `uv` yet:
+```bash
+# MacOS / Linux
+curl -LsSf [https://astral.sh/uv/install.sh](https://astral.sh/uv/install.sh) | sh
+
+# Windows (PowerShell)
+powershell -c "irm [https://astral.sh/uv/install.ps1](https://astral.sh/uv/install.ps1) | iex"
+
+# Or via pip
+pip install uv
+```
 
 ```bash
 # Clone the repository
