@@ -1,6 +1,6 @@
-# Video Summarizer
+# Video Summariser
 
-A high-performance Python tool that summarizes long videos by extracting short clips using intelligent selection modes. It uses `ffmpeg` for video processing and `multiprocessing` to leverage multiple CPU cores for faster rendering.
+A high-performance Python tool that summarises long videos by extracting short clips using intelligent selection modes. It uses `ffmpeg` for video processing and `multiprocessing` to leverage multiple CPU cores for faster rendering.
 
 ## Features
 
@@ -13,7 +13,7 @@ A high-performance Python tool that summarizes long videos by extracting short c
 * **Web Interface**: User-friendly drag-and-drop interface powered by Streamlit
 * **CLI Interface**: Command-line tool for batch processing and automation
 * **Smart Stitching**: Automatically combines processed clips into seamless summaries
-* **Image Extraction**: Optional extraction of key frames from summarized video
+* **Image Extraction**: Optional extraction of key frames from summarised video
 * **Run Configuration Tracking**: Each run captures all settings in `run_config.json` for reproducibility
 * **Per-Run Logging**: Isolated log file for each processing run
 
@@ -25,7 +25,7 @@ Requires Python 3.12+, FFmpeg (installed automatically via `imageio-ffmpeg`) and
 
 This project uses [uv](https://github.com/astral-sh/uv), an extremely fast Python package installer and resolver.
 
-### 1. Install `uv`
+### Install `uv`
 If you haven't installed `uv` yet:
 ```bash
 # MacOS / Linux
@@ -42,9 +42,6 @@ pip install uv
 # Clone the repository
 git clone https://github.com/williamdai8/video-summariser.git
 cd video-summariser
-
-# Install dependencies
-pip install -e .
 ```
 
 ## Usage
@@ -54,7 +51,7 @@ pip install -e .
 Run the interactive Streamlit application:
 
 ```bash
-streamlit run src/video_summariser/run_web.py
+uv run streamlit run src/video_summariser/run_web.py
 ```
 
 Then:
@@ -63,6 +60,7 @@ Then:
 3. Configure mode-specific parameters
 4. (Optional) Enable "Save Extracted Images"
 5. Click "🚀 Start Processing"
+6. Watch the Magic Happen! distiling a 60 minute video down to your chosen duration in less than 3 minutes.
 
 **Mode Details**:
 
@@ -91,7 +89,7 @@ python src/video_summariser/cli.py <input_video> [options]
 
 ## Configuration
 
-Edit `config.json` to customize defaults and directory paths:
+Edit `config.json` to customise defaults and directory paths:
 
 ```json
 {
@@ -120,7 +118,7 @@ Edit `config.json` to customize defaults and directory paths:
     },
     "defaults": {
         "mode": "fixed",
-        "chunk_size": 120,
+        "chunk_sise": 120,
         "interval": 10,
         "duration": 1.0,
         "min_gap": 5.0,
@@ -135,7 +133,7 @@ Edit `config.json` to customize defaults and directory paths:
 
 ## Output Structure
 
-Each processing run creates an organized folder with the following structure:
+Each processing run creates an organised folder with the following structure:
 
 ```
 user_data/output/
@@ -210,6 +208,7 @@ All temporary processing files are stored in `user_data/`:
 ## Requirements
 
 - Python 3.12+
+- uv for package management
 - FFmpeg (auto-installed via imageio-ffmpeg)
 - Streamlit (for web interface)
 - Additional dependencies: imageio-ffmpeg, streamlit
