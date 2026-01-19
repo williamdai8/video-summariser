@@ -1,0 +1,27 @@
+{
+    "directories": {
+        "base_output": "user_data",
+        "logs": "user_data/logs",
+        "video_output": "user_data/output/video",
+        "image_output": "user_data/output/video_images",
+        "temp_cli": "temp_cli_work",
+        "temp_web": "temp_web_work",
+        "temp_upload": "temp_web_upload"
+    },
+    "defaults": {
+        "mode": "fixed",
+        "chunk_size": 120,
+        "interval": 10,
+        "duration": 1.0,
+        "min_gap": 5.0,
+        "max_gap": 20.0,
+        "min_clip": 1.0,
+        "max_clip": 3.0,
+        "coverage_percent": 20,
+        "save_images": false
+    },
+    "logging": {
+        "level": "INFO",
+        "format": "%(asctime)s [%(levelname)s] %(message)s"
+    }
+}

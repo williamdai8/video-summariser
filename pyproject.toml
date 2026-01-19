@@ -1,0 +1,21 @@
+[project]
+name = "video-summarizer"
+version = "0.2.0"
+description = "High-performance video summarization tool with CLI and Web interfaces."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "imageio-ffmpeg>=0.5.1",
+    "streamlit>=1.32.0",
+]
+
+[project.scripts]
+video-summarizer = "video_summarizer.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+# Streamlit config
+[tool.streamlit]
+server.maxUploadSize = 500000
