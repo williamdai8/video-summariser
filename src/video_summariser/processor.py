@@ -19,7 +19,7 @@ class ConfigManager:
     def _load(self) -> Dict:
         if not self.path.exists():
             raise FileNotFoundError(f"Config file not found: {self.path.absolute()}")
-        with open(self.path, "r") as f:
+        with open(self.path, "r", encoding="utf-8") as f:
             return json.load(f)
 
     @property

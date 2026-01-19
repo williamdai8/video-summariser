@@ -2,3 +2,4 @@
 *.jpg
 *.log
 *.pyc
+/user_data

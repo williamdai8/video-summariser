@@ -4,11 +4,27 @@
         "logs": "user_data/logs",
         "video_output": "user_data/output/video",
         "image_output": "user_data/output/video_images",
-        "temp_cli": "temp_cli_work",
-        "temp_web": "temp_web_work",
-        "temp_upload": "temp_web_upload"
+        "temp_cli": "user_data/temp_cli_work",
+        "temp_web": "user_data/temp_web_work",
+        "temp_upload": "user_data/temp_web_upload"
+    },
+    "modes": {
+        "_description": "Three modes for selecting video clips to include in the summary",
+        "fixed": {
+            "label": "Fixed Interval",
+            "description": "📍 Selecting clips at fixed intervals (e.g., 10 seconds apart, 1 second duration)"
+        },
+        "random": {
+            "label": "Random Interval",
+            "description": "🎲 Randomly selecting clips with variable gaps and durations within specified ranges"
+        },
+        "coverage": {
+            "label": "Target Coverage",
+            "description": "🎯 Randomly selecting clips to achieve target coverage percentage of total video"
+        }
     },
     "defaults": {
+        "_comment": "mode can be 'fixed', 'random', or 'coverage'",
         "mode": "fixed",
         "chunk_size": 120,
         "interval": 10,
