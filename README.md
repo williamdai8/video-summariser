@@ -54,6 +54,21 @@ Run the interactive Streamlit application:
 uv run streamlit run src/video_summariser/run_web.py
 ```
 
+NOTE: POTENTIAL ERROR, HOW TO FIX!
+
+```bash
+warning: Failed to hardlink files; falling back to full copy. This may lead to degraded performance.
+         If the cache and target directories are on different filesystems, hardlinking may not be supported.
+         If this is intentional, set `export UV_LINK_MODE=copy` or use `--link-mode=copy` to suppress this warning.
+error: Failed to install: pydeck-0.9.1-py2.py3-none-any.whl (pydeck==0.9.1)
+  Caused by: failed to hardlink file from LOCATION\pydeck\bindings\base_map_provider.py to LOCATION\.venv\Lib\site-packages\pydeck\bindings\base_map_provider.py: The cloud operation cannot be performed on a file with incompatible hardlinks. (os error 396)
+```
+
+If you encounter the above error, run the below and hopefully be happy days:
+```bash
+set UV_LINK_MODE=copy
+```
+
 Then:
 1. Upload a video file (MP4, MOV, or MKV)
 2. Select a processing mode from the sidebar
